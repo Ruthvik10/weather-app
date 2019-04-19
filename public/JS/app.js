@@ -3,7 +3,7 @@ console.log("Client side js");
 document.querySelector('form').addEventListener('submit',(e)=>{
     e.preventDefault();
     const location=document.querySelector('#location').value;
-    fetch(`http://localhost:3000/weather?address=${location}`)
+    fetch(`/weather?address=${location}`)
     .then((response)=>{
         response.json()
         .then((data)=>{

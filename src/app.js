@@ -8,6 +8,7 @@ const forecast=require('./utils/forecast');
 const publicDirectoryPath=path.join(__dirname,"../public");
 const viewPath=path.join(__dirname,'../templates/views');
 const partialPath=path.join(__dirname,'../templates/partials');
+const port=process.env.PORT || 3000
 
 app.use(express.static(publicDirectoryPath))
 
@@ -81,6 +82,6 @@ app.get('*',(req,res)=>{
         name:'Ruthvik'
     })
 })
-app.listen(3000,()=>{
-    console.log("Started server at port 3000");
+app.listen(port,()=>{
+    console.log("Started server at port "+port);
 })
